@@ -1,0 +1,67 @@
+Here is your intensive 7-day plan. It focuses entirely on NumPy, Pandas, and FastAPI. It avoids passive reading. You will write code and build a functional data API from scratch.
+------------------------------
+## Phase 1: Numerical Foundations (Days 1–2)
+Learn NumPy to understand how computer memory handles large vectors of text embeddings and mathematical data.
+## Day 1: Multi-Dimensional Arrays
+
+* Goal: Move away from slow Python lists. Master high-performance arrays.
+* Concepts: np.array(), shapes, data types (dtype), and array arithmetic.
+* Action: Create a 1D array of 100 random float numbers. Reshape it into a 10x10 grid. Find the maximum value in each individual row.
+
+## Day 2: Array Masking and Filtering
+
+* Goal: Extract data based on complex conditions without using nested loops.
+* Concepts: Vectorized operations, boolean slicing, and statistical aggregates (mean, std, sum).
+* Action: Generate a grid of 50 integers between -10 and 10. Filter out all negative numbers automatically using a single boolean mask. Replace them with zeros.
+
+------------------------------
+## Phase 2: Data Engineering Foundations (Days 3–4)
+Transition to Pandas. This is where you manipulate datasets, read system files, and prepare unstructured text data for AI contexts.
+## Day 3: DataFrames and Cleaning
+
+* Goal: Import, inspect, and fix broken real-world tabular data.
+* Concepts: pd.DataFrame(), reading CSVs, handling missing fields (dropna, fillna), and sorting.
+* Action: Create a mock customer database file manually. Programmatically find rows with empty email fields. Replace those missing fields with a default string indicator.
+
+## Day 4: Grouping and Aggregating
+
+* Goal: Slice and dice datasets based on categorical groupings.
+* Concepts: .groupby(), .apply(), mapping column data, and converting tables to JSON strings.
+* Action: Build a mock catalog of 20 retail products across three categories. Calculate the average price per category. Export the final calculated summary directly into a dictionary format.
+
+------------------------------
+## Phase 3: High-Performance Backend APIs (Days 5–6)
+Bridge your data scripts to the web using FastAPI. You will learn how data moves securely between an app and an internet client.
+## Day 5: Routes, Server Setup, and Data Validation
+
+* Goal: Build your first live server environment with type safety.
+* Concepts: FastAPI() app initialization, uvicorn live reloading, and Pydantic models.
+* Action: Write an endpoint that accepts user sign-up requests. Validate that the password field is a string and the age field is an integer. Return a success message.
+
+## Day 6: Asynchronous Operations and Path Variables
+
+* Goal: Handle high-traffic web requests cleanly.
+* Concepts: Async functions (async def), HTTP status codes, and path parameters.
+* Action: Create a dynamic lookup endpoint (/users/{user_id}). If the ID does not exist in an in-memory dictionary, raise a structural 404 Not Found exception.
+
+------------------------------
+## Phase 4: The Capstone Integration (Day 7)
+Combine all three libraries into a unified, functional mini-application.
+## Day 7: The Data Analysis API Engine
+
+* Goal: Build an operational backend tool that processes raw statistics via HTTP requests.
+* The Blueprint:
+1. Create a FastAPI server instance.
+   2. Write a POST endpoint that accepts an incoming batch of raw structural matrix numbers via a Pydantic list container.
+   3. Convert the incoming list instantly into a NumPy array inside your function logic.
+   4. Pass that array into a Pandas DataFrame to compute the row-by-row cumulative metrics.
+   5. Return the finalized calculated summary directly to the web client as a structured JSON object.
+
+------------------------------
+## System Setup Checklist
+Run this terminal installation script right now to set up your environment:
+
+pip install numpy pandas fastapi "uvicorn[standard]" pydantic
+
+Would you like the exact starter code template for Day 1 to begin coding immediately, or do you need a quick visual breakdown of how a Pydantic schema validates incoming data?
+
